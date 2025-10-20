@@ -1,0 +1,163 @@
+/* Corpo com fundo */
+body {
+  font-family: Montserrat;
+  background-image: url('https://uploads.onecompiler.io/43rztqcbh/43zm86mbw/6-livros-para-melhorar-a-comunicacao-1170x700.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #f4f4f9;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  display: flex; /* Usando flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Faz com que o body ocupe toda a altura da tela */
+}
+
+/* Menu */
+.menu-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 400px;
+  margin: 100px auto;
+  font-family: Montserrat;
+}
+
+.menu-container h1 { color: #45a049; font-weight: bold; }
+.menu-container h2 { color: #4caf50; font-weight: bold; }
+.menu-container p { color: #333; }
+
+.menu-container button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.menu-container button:hover { background-color: #45a049; }
+
+.imageminicial { display:flex; justify-content:center; align-items:center; margin-top:20px; }
+.imageminicial img { max-width:100%; height:auto; object-fit:contain; }
+
+/* Quiz */
+.quiz-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente dentro do container */
+  align-items: center; /* Centraliza verticalmente dentro do container */
+  flex-direction: row; /* Certifica-se de que o conteúdo seja organizado em linha */
+}
+
+/* Outras regras do Quiz... */
+.quiz-content { 
+  flex: 2; 
+  text-align: left; 
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-image { 
+  flex: 1; 
+  display:flex; 
+  justify-content:center; 
+  align-items:flex-start; 
+}
+  
+.quiz-image img { 
+  width: 200px; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+  transition: transform 0.3s ease; 
+}
+
+.quiz-image img:hover { 
+  transform: scale(1.05); 
+}
+
+/* Cores por dificuldade */
+.difficulty-facil { color: #4caf50; }
+.difficulty-medio { color: #FFD700; }
+.difficulty-dificil { color: #FF0000; }
+.difficulty-impossivel { color: #301934; }
+
+.question-number { 
+  font-size: 16px; 
+  color: #666; 
+  margin-bottom: 10px; 
+  font-weight: bold; 
+}
+
+.question { 
+  font-size: 18px; 
+  margin-bottom: 20px;
+  color: #333; 
+  min-height: 60px; 
+}
+
+.answer-buttons { 
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* coloca os botões um abaixo do outro */
+  gap: 10px; /* espaço entre os botões */
+}
+
+.answer-buttons button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* ocupa toda a largura disponível */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: Montserrat;
+}
+
+.answer-buttons button:hover:not(:disabled) { 
+  background-color: #45a049; 
+  font-family: Montserrat;
+}
+
+.answer-buttons button:disabled { 
+  background-color: #ccc; 
+  cursor: not-allowed;
+  font-family: Montserrat;
+}
+
+#next-button button {
+  background-color: #4caf50;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:16px;
+  transition: background-color 0.3s ease;
+  width:100%;
+  font-family: Montserrat;
+}
+
+#next-button button:hover { 
+  background-color:#45a049; 
+}
+
+.score { font-size:15px; color:#333; margin-top:10px; }
+
+.start-btn{
+   font-family: Montserrat;
+}

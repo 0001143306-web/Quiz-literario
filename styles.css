@@ -17,14 +17,33 @@ body {
 }
 
 /* Menu */
+/* Menu */
 .menu-container {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  width: 400px;
+  width: 900px;
+  height: auto;
   margin: 100px auto;
   font-family: Montserrat;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInFromLeft 0.8s forwards ease-out;
+  display: flex;                /* organiza em linha */
+  justify-content: space-between; /* separa texto e imagem */
+  align-items: center;          /* alinha verticalmente */
+  text-align: left;
+}
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-text {
+  flex: 2;
 }
 
 .menu-container h1 { color: #45a049; font-weight: bold; }
@@ -40,11 +59,39 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 .menu-container button:hover { background-color: #45a049; }
 
-.imageminicial { display:flex; justify-content:center; align-items:center; margin-top:20px; }
-.imageminicial img { max-width:100%; height:auto; object-fit:contain; }
+/* Imagem à direita */
+.imageminicial {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageminicial img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  animation: pulse 2s infinite ease-in-out; /* 👈 animação suave e infinita */
+  transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 /* Quiz */
 .quiz-container {
@@ -161,3 +208,164 @@ body {
 .start-btn{
    font-family: Montserrat;
 }
+/* Estilo para o input de nome */
+.caixanome {
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+  display: block;
+}
+
+#nome {
+  width: 80%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: Montserrat;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#nome:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+/* Ranking */
+.ranking-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.ranking-container h2 {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#ranking-list li {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#ranking-list li:first-child {
+  background-color: #ffd700;
+  color: #000;
+}
+
+#restart-btn {
+  padding: 12px 25px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#restart-btn:hover {
+  background-color: #45a049;
+}
+/* Container do ranking */
+#ranking {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Montserrat';
+  color: #333;
+}
+
+/* Títulos */
+#ranking h2,
+#ranking h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #222;
+  font-family: 'Montserrat';
+}
+
+/* Mensagem final */
+#ranking p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: 'Montserrat';
+}
+
+/* Lista do ranking */
+#ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  font-family: 'Montserrat';
+}
+
+#ranking-list li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  cursor: default;
+  font-family: 'Montserrat';
+}
+
+/* Destaque para o primeiro colocado */
+#ranking-list li:first-child {
+  background: linear-gradient(90deg, #ffcc00, #ffdd44);
+  color: #3b2e00;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6);
+  font-family: 'Montserrat';
+}
+
+/* Efeito hover sutil */
+#ranking-list li:hover:not(:first-child) {
+  background-color: #e9f5ff;
+}
+
+/* Botão reiniciar */
+#restart-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: ##45a049;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat';
+}
+
+#restart-btn:hover {
+  background-color: #4caf50;
+}
+
+
+

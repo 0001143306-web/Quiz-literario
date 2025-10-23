@@ -7,17 +7,24 @@
   <link rel="icon" href="https://uploads.onecompiler.io/43rztqcbh/43zm86mbw/como-escrever-um-livro-topo-Photoroom.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   
   <!-- Menu Inicial -->
   <div class="menu-container" id="menu">
-    <h1>QUIZ LITERÁRIO</h1>
-    <h2>Você conhece tudo sobre livros?</h2>
-    <p>Então faça nosso quiz em comemoração à Semana da Biblioteca e descubra se você é um verdadeiro "expert" da literatura popular!</p>
-    <button id="start-btn">Começar</button>
+    <div class="menu-text">
+      <h1>QUIZ LITERÁRIO</h1>
+      <h2>Você conhece tudo sobre livros?</h2>
+      <p>Então faça nosso quiz em comemoração à Semana da Biblioteca e descubra se você é um verdadeiro "expert" da literatura popular!</p>
+
+      <label for="nome" class="caixanome">Digite seu nome:</label>
+      <input id="nome" type="text" placeholder="Seu nome aqui..." />
+
+      <button id="start-btn">Começar</button>
+    </div>
+
     <div class="imageminicial">
       <img src="https://uploads.onecompiler.io/43rztqcbh/43zm86mbw/como-escrever-um-livro-topo.png" alt="imagem inicial">
     </div>
@@ -40,6 +47,14 @@
       <img id="question-image" src="" alt="Imagem da pergunta">
     </div>
   </div>
+  
+<<!-- Container do ranking, inicialmente escondido -->
+<div id="ranking" style="display:none;">
+  <h2>Ranking - Top 10</h2>
+  <ul id="ranking-list"></ul>
+  <button id="restart-btn">Reiniciar Quiz</button>
+</div>
+
 
   <script src="script.js"></script>
 </body>
